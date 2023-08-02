@@ -1,0 +1,18 @@
+const express = require("express");
+const signUp = require("../controllers/signUp");
+const route = express.Router();
+
+route.post("/register", signUp);
+route.post("/register", login);
+route.get("/viewMenu", food);
+route.post("/addToCart", cart);
+route.get("/viewCart", cart);
+route.post("/Checkout", checkout);
+route.post("/checkout/delivery", details);
+route.post("/checkout/payment", payment);
+route.post("/checkout/confirmOrder", confirm);
+route.get("/orders/:orderId", order);
+route.post("/notifications/restaurent", restaurent);
+route.put("/orders/:orderId/delivered", delivered);
+
+module.exports = route;
