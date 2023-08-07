@@ -1,5 +1,5 @@
 import React from "react";
-
+import Homepage from "./Godwin-Prince/Homepage";
 function App() {
   const [data, setData] = React.useState(null);
 
@@ -10,7 +10,10 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <header className="App-header">
+        <p>{!data ? "" : data}</p>
+      </header>
+      <Homepage />
     </div>
   );
 }
